@@ -5,14 +5,14 @@
 
 Name:		ganglia-plugin-varnish
 Version:	1
-Release:	2%{?dist}
+Release:	3%{?dist}
 Summary:	Ganglia metric plugin for Varnish.
 
 Group:		SEAS/IRCS
 License:	BSD
 Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
-
+BuildArch:	noarch
 BuildRequires:	python-setuptools
 Requires:	python-setuptools
 Requires:	ganglia-gmond-modules-python
