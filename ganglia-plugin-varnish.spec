@@ -45,7 +45,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc README.rst
 
 %{_sysconfdir}/ganglia/conf.d/varnish.pyconf
-%{_libdir}/ganglia/python_modules/varnish.py
+%{_libdir}/ganglia/python_modules/varnishstats.py
 
 %{python_sitelib}/varnish/
 %{python_sitelib}/ganglia_plugin_varnish*.egg-info
