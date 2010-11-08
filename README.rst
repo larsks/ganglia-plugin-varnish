@@ -1,0 +1,2 @@
+Varnish plugin for Ganglia.
+
