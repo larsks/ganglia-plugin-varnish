@@ -10,7 +10,7 @@ def read_spec_file(fname):
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
-setup(name='firewall-compiler',
+setup(name='ganglia-plugin-varnish',
         version=read_spec_file('ganglia-plugin-varnish.spec'),
         description='Ganglia gmond plugin for Varnish',
         long_description=read('README.rst'),
