@@ -5,7 +5,7 @@
 
 Name:		ganglia-plugin-varnish
 Version:	1
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Ganglia metric plugin for Varnish.
 
 Group:		SEAS/IRCS

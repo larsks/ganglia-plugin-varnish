@@ -1,6 +1,6 @@
 modules {
   module {
-    name = "varnish"
+    name = "varnishstats"
     language = "python"
     param RefreshRate {
         value = 60 
