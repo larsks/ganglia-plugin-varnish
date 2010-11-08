@@ -1,6 +1,6 @@
 modules {
   module {
-    name = "varnish_plugin"
+    name = "varnish"
     language = "python"
     param RefreshRate {
         value = 60 
@@ -12,109 +12,117 @@ collection_group {
   collect_every = 60
   time_threshold = 120
 
-metric {
-    name = "client_conn_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "client_req_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "cache_hit_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "cache_hitpass_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "cache_miss_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "backend_conn_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "backend_busy_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "n_wrk"
-    value_threshold = 1.0
-}
-metric {
-    name = "n_wrk_queue"
-    value_threshold = 1.0
-}
-metric {
-    name = "s_sess_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "s_req_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "s_pipe_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "s_pass_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "s_fetch_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "s_hdrbytes_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "s_bodybytes_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "n_vcl"
-    value_threshold = 1.0
-}
-metric {
-    name = "n_vcl_avail"
-    value_threshold = 1.0
-}
-metric {
-    name = "n_purge"
-    value_threshold = 1.0
-}
-metric {
-    name = "n_purge_add_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "n_purge_retire_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "esi_parse_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "esi_errors_delta"
-    value_threshold = 1.0
-}
-metric {
-    name = "uptime"
-    value_threshold = 1.0
-}
-metric {
-    name = "cache_hit_ratio"
-    value_threshold = 1.0
-}
-metric {
-    name = "cache_hit_pct"
-    value_threshold = 1.0
-}
+  # This is not the full set of metrics available from varnish.
+  # To see the complete list of metrics, run:
+  #
+  #  .../python_modules/varnish.py -M
+  #
+  # This will generate output suitable for including in
+  # this configuration file.
+
+  metric {
+      name = "client_conn_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "client_req_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "cache_hit_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "cache_hitpass_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "cache_miss_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "backend_conn_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "backend_busy_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "n_wrk"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "n_wrk_queue"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "s_sess_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "s_req_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "s_pipe_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "s_pass_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "s_fetch_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "s_hdrbytes_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "s_bodybytes_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "n_vcl"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "n_vcl_avail"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "n_purge"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "n_purge_add_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "n_purge_retire_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "esi_parse_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "esi_errors_delta"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "uptime"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "cache_hit_ratio"
+      value_threshold = 1.0
+  }
+  metric {
+      name = "cache_hit_pct"
+      value_threshold = 1.0
+  }
 }
 
