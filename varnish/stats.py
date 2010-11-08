@@ -96,7 +96,7 @@ class VarnishStatMonitor (threading.Thread):
         self.quit_c.notify()
         self.quit_c.release()
 
-    self.join()
+        self.join()
 
     def generate_descriptors(self):
         '''Generate a descriptor list for Ganglia.'''
