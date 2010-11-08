@@ -21,7 +21,7 @@ class DeltaDict (dict):
         super(DeltaDict, self).__setitem__(k, v)
 
 class VarnishStatMonitor (threading.Thread):
-    '''Collects Varnish statistics using the varnishstats program
+    '''Collects Varnish statistics using the varnishstat program
     and makes them available to Ganglia via the gmond Python module
     interface.'''
 
@@ -30,8 +30,8 @@ class VarnishStatMonitor (threading.Thread):
         self.lock = threading.Lock()
 
         self.interval = int(params.get('RefreshRate', 60))
-        self.varnishstats = params.get('VarnishstatsPath',
-            'varnishstats')
+        self.varnishstat = params.get('VarnishstatPath',
+            'varnishstat')
         self.quit = False
         self.quit_c = threading.Condition()
 
@@ -39,10 +39,10 @@ class VarnishStatMonitor (threading.Thread):
         super(VarnishStatMonitor, self).__init__()
 
     def read_stats(self):
-        '''Read XML output from varnishstats and parse it 
+        '''Read XML output from varnishstat and parse it 
         with lxml.etree.'''
 
-        p = subprocess.Popen([self.varnishstats, '-1', '-x'],
+        p = subprocess.Popen([self.varnishstat, '-1', '-x'],
             stdout=subprocess.PIPE)
         p.wait()
 
