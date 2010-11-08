@@ -24,7 +24,7 @@ def metric_cleanup():
 def parse_args():
     p = optparse.OptionParser()
     p.add_option('-M', '--metrics', action='store_true')
-    p.add_option('-o', '--option', action='append')
+    p.add_option('-o', '--option', action='append', default=[])
 
     return p.parse_args()
 
