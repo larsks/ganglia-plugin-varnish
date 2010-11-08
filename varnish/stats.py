@@ -62,10 +62,17 @@ class VarnishStatMonitor (threading.Thread):
             self._data[name] = int(value)
 
         # We need to calculate a few metrics from the raw data.
-        self._data['cache_hit_ratio'] = \
-            (self._data['cache_hit'] * 1.0) / self._data['cache_miss']
-        self._data['cache_hit_pct'] = \
-            (self._data['cache_hit'] * 1.0) / self._data['client_req'] * 100
+        if self._data['cache_miss'] == 0:
+            self._data['cache_hit_ratio'] = 0
+        else:
+            self._data['cache_hit_ratio'] = \
+                (self._data['cache_hit'] * 1.0) / self._data['cache_miss']
+
+        if self._data['client_req'] == 0:
+            self._data['cache_hit_pct'] = 0
+        else:
+            self._data['cache_hit_pct'] = \
+                (self._data['cache_hit'] * 1.0) / self._data['client_req'] * 100
 
         self.lock.release()
 
