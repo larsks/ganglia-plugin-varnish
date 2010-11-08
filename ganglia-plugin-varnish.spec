@@ -33,7 +33,7 @@ rm -rf $RPM_BUILD_ROOT
 python setup.py install --root=$RPM_BUILD_ROOT
 
 install -m 755 -d $RPM_BUILD_ROOT%{_libdir}/ganglia/python_modules/
-install -m 755 lib/varnish.py $RPM_BUILD_ROOT%{_libdir}/ganglia/python_modules/
+install -m 755 lib/varnishstats.py $RPM_BUILD_ROOT%{_libdir}/ganglia/python_modules/
 install -m 755 -d $RPM_BUILD_ROOT%{_sysconfdir}/ganglia/conf.d/
 install -m 644 varnish.pyconf $RPM_BUILD_ROOT%{_sysconfdir}/ganglia/conf.d/
 
