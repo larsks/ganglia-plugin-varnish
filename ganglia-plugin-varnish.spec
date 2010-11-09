@@ -39,8 +39,8 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc README.rst
 
-%{_sysconfdir}/ganglia/conf.d/varnishstats.pyconf.sample
-%{_libdir}/ganglia/python_modules/varnishstats.py*
+%{_sysconfdir}/ganglia/conf.d/varnish_plugin.pyconf.sample
+%{_libdir}/ganglia/python_modules/varnish_plugin.py*
 
 %{python_sitelib}/varnish/
 %{python_sitelib}/ganglia_plugin_varnish*.egg-info
