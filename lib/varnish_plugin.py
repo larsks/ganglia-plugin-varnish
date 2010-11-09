@@ -64,7 +64,7 @@ def main():
         for d in v.descriptors:
             metrics.append(METRIC_TEMPLATE % d)
 
-        print CONFIG_TEMPLATE % { 'metrics': metrics }
+        print CONFIG_TEMPLATE % { 'metrics': '\n'.join(metrics) }
 
 if __name__ == '__main__':
     main()
