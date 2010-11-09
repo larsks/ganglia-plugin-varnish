@@ -30,7 +30,7 @@ make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-make install DESTDIR=$RPM_BUILD_ROOT libdir=${_libdir}
+make install DESTDIR=$RPM_BUILD_ROOT libdir=%{_libdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -39,7 +39,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc README.rst
 
-%{_sysconfdir}/ganglia/conf.d/varnishstats.pyconf
+%{_sysconfdir}/ganglia/conf.d/varnishstats.pyconf.sample
 %{_libdir}/ganglia/python_modules/varnishstats.py*
 
 %{python_sitelib}/varnish/
