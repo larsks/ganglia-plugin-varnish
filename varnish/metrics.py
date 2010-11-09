@@ -48,7 +48,7 @@ class Metric (object):
                 'groups':       self.groups,
                 }
 
-    def get_value (self):
+    def get_value (self, name=None):
 	self.lock.acquire()
 	v = self._value
 	self.lock.release()
