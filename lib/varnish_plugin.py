@@ -5,7 +5,26 @@ import sys
 import optparse
 import varnish.stats
 
-METRIC = '''metric {
+CONFIG_TEMPLATE = '''
+
+modules {
+  module {
+    name = "varnish_plugin"
+    language = "python"
+    param RefreshRate { value = 60 }
+  }
+}
+
+collection_group {
+  collect_every = 60
+  time_threshold = 120
+
+%(metrics)s
+
+}
+'''
+
+METRIC_TEMPLATE = '''metric {
     # %(description)s (%(value_type)s)
     # display format: %(format)s
     name = "%(name)s"
@@ -41,8 +60,11 @@ def main():
     v = varnish.stats.VarnishstatMonitor(params)
 
     if opts.metrics:
+        metrics = []
         for d in v.descriptors:
-            print METRIC % d
+            metrics.append(METRIC_TEMPLATE % d)
+
+        print CONFIG_TEMPLATE % { 'metrics': metrics }
 
 if __name__ == '__main__':
     main()

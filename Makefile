@@ -15,10 +15,10 @@ install: all
 	python setup.py install $(INSTALL_ARGS)
 	#
 	install -d -m 755 $(DESTDIR)$(libdir)/ganglia/python_modules
-	install -m 755 lib/varnishstats.py \
+	install -m 755 lib/varnish_plugin.py \
 		$(DESTDIR)$(libdir)/ganglia/python_modules
 	#
 	install -d -m 755 $(DESTDIR)$(sysconfdir)/ganglia/conf.d
-	install -m 755 varnishstats.pyconf \
-		$(DESTDIR)$(sysconfdir)/ganglia/conf.d/varnishstats.pyconf.sample
+	install -m 755 varnish_plugin.pyconf \
+		$(DESTDIR)$(sysconfdir)/ganglia/conf.d/varnish_plugin.pyconf.sample
 
