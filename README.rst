@@ -55,7 +55,7 @@ Support
 
 Please post question/comments/suggestions to the issue tracker:
 
-  https://github.com/larsks/ganglia-plugin-varnish/issues
+- https://github.com/larsks/ganglia-plugin-varnish/issues
 
 Author
 ======
