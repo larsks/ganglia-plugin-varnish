@@ -1,6 +1,10 @@
 #!/usr/bin/python
 
 import time
+import threading
+
+M_COUNT = 0
+M_RATE	= 1
 
 DEFAULT = {
         'time_max'      : 120,
@@ -30,6 +34,8 @@ class Metric (object):
         # Set initial value.
         self._value = firstDefined(initval, 0)
 
+	self.lock = threading.Lock()
+
     def get_descriptor (self):
         return {
                 'name':         self.name,
@@ -43,10 +49,16 @@ class Metric (object):
                 }
 
     def get_value (self):
-        return self._value
+	self.lock.acquire()
+	v = self._value
+	self.lock.release()
+
+        return v
 
     def update(self, v):
+    	self.lock.acquire()
         self._value = v
+    	self.lock.release()
 
     def refresh(self):
         pass
@@ -63,8 +75,10 @@ class DeltaMetric (Metric):
         self._value = 0
 
     def update(self, v):
+    	self.lock.acquire()
         self._value = v - self._previous
         self._previous = v
+    	self.lock.release()
 
     def refresh(self):
         self.update(self._previous)
@@ -73,15 +87,19 @@ class RateMetric (Metric):
     '''The value of this metric is the delta over time between the current
     and previous values.'''
     def __init__(self, name, **kwargs):
+    	kwargs['value_type'] = 'float'
+	kwargs.setdefault('format', '%0.2f')
         super(RateMetric, self).__init__(name, **kwargs)
         self._time = time.time()
         self._previous = self._value
 
     def update(self, v):
+    	self.lock.acquire()
         now = time.time()
         self._value = (v - self._previous * 1.0)/(now - self._time)
         self._previous = v
         self._time = now
+    	self.lock.release()
 
     def refresh(self):
         self.update(self._previous)

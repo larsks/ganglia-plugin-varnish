@@ -2,79 +2,78 @@
 
 import os
 import sys
-import subprocess
-import lxml.etree
-import optparse
 import threading
 import time
 import signal
 
-class DeltaDict (dict):
-    '''Stores the delta between the old and new value of a key as
-    <key>_delta.'''
-    
-    def __setitem__ (self, k, v):
-        ov = self.get(k,v)
-        dv = v - ov
+import metrics
+import varnishstat
 
-        super(DeltaDict, self).__setitem__('%s_delta' % k, dv)
-        super(DeltaDict, self).__setitem__(k, v)
-
-class VarnishStatMonitor (threading.Thread):
+class VarnishstatMonitor (threading.Thread):
     '''Collects Varnish statistics using the varnishstat program
     and makes them available to Ganglia via the gmond Python module
     interface.'''
 
     def __init__ (self, params):
-        self._data = DeltaDict()
-        self.lock = threading.Lock()
+        self.params = params
+        self.refresh = int(params.get('RefreshRate', 60))
 
-        self.interval = int(params.get('RefreshRate', 60))
-        self.varnishstat = params.get('VarnishstatPath',
-            'varnishstat')
+        self.varnishstat = varnishstat.Varnishstat(params)
+        self.discover_metrics()
+
+        self.lock = threading.Lock()
         self.quit = False
         self.quit_c = threading.Condition()
 
-        self.generate_descriptors()
-        super(VarnishStatMonitor, self).__init__()
+        super(VarnishstatMonitor, self).__init__()
 
-    def read_stats(self):
-        '''Read XML output from varnishstat and parse it 
-        with lxml.etree.'''
+    def discover_metrics(self):
+        self.metrics = {}
 
-        p = subprocess.Popen([self.varnishstat, '-1', '-x'],
-            stdout=subprocess.PIPE)
-        p.wait()
+        for m in self.varnishstat.discover_metrics():
+            if m[2] == 'count':
+                self.metrics[m[0]] = metrics.Metric(
+                    m[0],
+                    description=m[1],
+                    time_max=2 * self.refresh)
+            else:
+                self.metrics[m[0]] = metrics.RateMetric(
+                    m[0],
+                    description=m[1],
+                    time_max=2 * self.refresh)
 
-        doc = lxml.etree.fromstring(p.stdout.read())
-        return doc
+        # These are metrics we calculate.
+        self.metrics['cache_hit_ratio'] = metrics.Metric('cache_hit_ratio',
+            time_max=2 * self.refresh,
+            format='%0.2f')
+        self.metrics['cache_hit_pct'] = metrics.Metric('cache_hit_pct',
+            time_max=2 * self.refresh,
+            format='%0.2f%%')
+
+    def get_descriptors(self):
+        return [x.descriptor for x in self.metrics.values()]
+
+    descriptors = property(get_descriptors)
 
     def update_metrics(self):
         '''Update the in-memory metrics.'''
 
-        doc = self.read_stats()
-
-        self.lock.acquire()
-
-        for stat in doc.xpath('/varnishstat/stat'):
-            name = stat.xpath('name')[0].text
-            value = stat.xpath('value')[0].text
-            self._data[name] = int(value)
+        for name, value in self.varnishstat.read_metrics():
+            if name in self.metrics:
+                self.metrics[name].update(value)
 
         # We need to calculate a few metrics from the raw data.
-        if self._data['cache_miss'] == 0:
-            self._data['cache_hit_ratio'] = 0
-        else:
-            self._data['cache_hit_ratio'] = \
-                (self._data['cache_hit'] * 1.0) / self._data['cache_miss']
+        try:
+            self.metrics['cache_hit_ratio'].update(
+                (self.metrics['cache_hit'].value*1.0)/self.metrics['cache_miss'].value)
+        except ZeroDivisionError:
+            self.metrics['cache_hit_ratio'].update(0)
 
-        if self._data['client_req'] == 0:
-            self._data['cache_hit_pct'] = 0
-        else:
-            self._data['cache_hit_pct'] = \
-                (self._data['cache_hit'] * 1.0) / self._data['client_req'] * 100
-
-        self.lock.release()
+        try:
+            self.metrics['cache_hit_pct'].update(
+                (self.metrics['cache_hit'].value*1.0)/self.metrics['client_req'].value * 100)
+        except ZeroDivisionError:
+            self.metrics['cache_hit_pct'].update(0)
 
     def run(self):
         '''Loop until somsone calls the stop() method.'''
@@ -83,17 +82,8 @@ class VarnishStatMonitor (threading.Thread):
             self.update_metrics()
 
             self.quit_c.acquire()
-            self.quit_c.wait(self.interval)
+            self.quit_c.wait(self.refresh)
             self.quit_c.release()
-
-    def data(self):
-        '''Returns a consistent copy of the in-memory statistics.'''
-
-        self.lock.acquire()
-        x = dict(self._data)
-        self.lock.release()
-
-        return x
 
     def stop(self):
         '''Stop the monitoring thread.'''
@@ -105,66 +95,8 @@ class VarnishStatMonitor (threading.Thread):
 
         self.join()
 
-    def generate_descriptors(self):
-        '''Generate a descriptor list for Ganglia.'''
-
-        self.descriptors = []
-
-        doc = self.read_stats()
-        for stat in doc.xpath('/varnishstat/stat'):
-            name = stat.xpath('name')[0].text
-            desc = stat.xpath('description')[0].text
-
-            self.descriptors.append({
-                'name':         name,
-                'description':  desc,
-                'call_back':    self.fetch,
-                'time_max':     self.interval * 2,
-                'value_type':   'uint',
-                'slope':        'both',
-                'format':       '%u',
-                'groups':       'varnish_metrics',
-            })
-
-            self.descriptors.append({
-                'name':         '%s_delta' % name,
-                'description':  '%s (delta)' % desc,
-                'call_back':    self.fetch,
-                'time_max':     self.interval * 2,
-                'value_type':   'uint',
-                'slope':        'both',
-                'format':       '%u',
-                'groups':       'varnish_metrics',
-            })
-
-        self.descriptors.append({
-                'name':         'cache_hit_ratio',
-                'description':  'Cache hit/miss ratio',
-                'call_back':    self.fetch,
-                'time_max':     self.interval * 2,
-                'value_type':   'float',
-                'slope':        'both',
-                'format':       '%f',
-                'groups':       'varnish_metrics',
-        })
-
-        self.descriptors.append({
-                'name':         'cache_hit_pct',
-                'description':  'Cache hit percent',
-                'call_back':    self.fetch,
-                'time_max':     self.interval * 2,
-                'value_type':   'float',
-                'slope':        'both',
-                'format':       '%f',
-                'groups':       'varnish_metrics',
-        })
-
-    def fetch(self, name):
-        '''Return one value.  This is the callback function used
-        in the Ganglia descriptors.'''
-
-        return self.data()[name]
-
 if __name__ == '__main__':
-    v = VarnishStatMonitor({})
+    v = VarnishstatMonitor({})
+
+# vim: set ts=4 sw=4 expandtab ai :
 

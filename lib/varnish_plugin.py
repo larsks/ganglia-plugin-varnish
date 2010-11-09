@@ -7,13 +7,14 @@ import varnish.stats
 
 METRIC = '''metric {
     # %(description)s (%(value_type)s)
+    # display format: %(format)s
     name = "%(name)s"
     value_threshold = 1.0
 }'''
 
 def metric_init(params):
     global MONITOR
-    MONITOR = varnish.stats.VarnishStatMonitor(params)
+    MONITOR = varnish.stats.VarnishstatMonitor(params)
     MONITOR.start()
 
     return MONITOR.descriptors
@@ -37,7 +38,7 @@ def main():
         k,v = pspec.split('=', 1)
         param[k] = v
 
-    v = varnish.stats.VarnishStatMonitor(params)
+    v = varnish.stats.VarnishstatMonitor(params)
 
     if opts.metrics:
         for d in v.descriptors:
