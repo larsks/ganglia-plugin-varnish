@@ -50,6 +50,13 @@ to correctly identify the metric type (rate vs. counter) from the output of
 moment it is not possible to override the type determined by these
 heuristics.
 
+Support
+=======
+
+Please post question/comments/suggestions to the issue tracker:
+
+  https://github.com/larsks/ganglia-plugin-varnish/issues
+
 Author
 ======
 
