@@ -35,20 +35,26 @@ class VarnishstatMonitor (threading.Thread):
                 self.metrics[m[0]] = metrics.Metric(
                     m[0],
                     description=m[1],
+                    groups='varnish',
                     time_max=2 * self.refresh)
             else:
                 self.metrics[m[0]] = metrics.RateMetric(
                     m[0],
                     description=m[1],
+                    groups='varnish',
                     time_max=2 * self.refresh)
 
         # These are metrics we calculate.
         self.metrics['cache_hit_ratio'] = metrics.Metric('cache_hit_ratio',
+            value_type='float',
+            groups='varnish',
             time_max=2 * self.refresh,
             format='%0.2f')
         self.metrics['cache_hit_pct'] = metrics.Metric('cache_hit_pct',
+            value_type='float',
+            groups='varnish',
             time_max=2 * self.refresh,
-            format='%0.2f%%')
+            format='%0.2f')
 
     def get_descriptors(self):
         return [x.descriptor for x in self.metrics.values()]
