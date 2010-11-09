@@ -1,10 +1,10 @@
+
+
 modules {
   module {
-    name = "varnishstats"
+    name = "varnish_plugin"
     language = "python"
-    param RefreshRate {
-        value = 60 
-    }
+    param RefreshRate { value = 60 }
   }
 }
 
@@ -12,831 +12,642 @@ collection_group {
   collect_every = 60
   time_threshold = 120
 
-  # This is not the full set of metrics available from varnish.
-  # To see the complete list of metrics, run:
-  #
-  #  .../python_modules/varnishstats.py -M
-  #
-  # This will generate output suitable for including in
-  # this configuration file.
-
-
-  metric {
-      name = "client_conn_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "client_drop_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "client_req_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "cache_hit_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "cache_hitpass_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "cache_miss_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_conn"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_conn_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_unhealthy"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_unhealthy_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_busy"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_busy_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_fail"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_fail_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_reuse"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_reuse_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_toolate"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_toolate_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_recycle"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_recycle_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_unused"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_unused_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_head"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_head_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_length"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_length_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_chunked"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_chunked_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_eof"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_eof_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_bad"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_bad_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_close"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_close_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_oldhttp"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_oldhttp_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_zero"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_zero_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_failed"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "fetch_failed_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_sess_mem"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_sess_mem_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_sess"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_sess_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_object"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_object_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_vampireobject"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_vampireobject_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_objectcore"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_objectcore_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_objecthead"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_objecthead_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_smf"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_smf_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_smf_frag"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_smf_frag_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_smf_large"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_smf_large_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_vbe_conn"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_vbe_conn_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_create"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_create_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_failed"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_failed_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_max"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_max_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_queue"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_queue_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_overflow"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_overflow_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_drop"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_wrk_drop_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_backend"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_backend_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_expired"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_expired_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_lru_nuked"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_lru_nuked_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_lru_saved"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_lru_saved_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_lru_moved"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_lru_moved_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_deathrow"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_deathrow_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "losthdr"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "losthdr_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_objsendfile"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_objsendfile_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_objwrite"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_objwrite_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_objoverflow"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_objoverflow_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_sess"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_sess_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_req"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_req_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_pipe"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_pipe_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_pass"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_pass_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_fetch"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_fetch_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_hdrbytes"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_hdrbytes_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_bodybytes"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "s_bodybytes_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sess_closed"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sess_closed_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sess_pipeline"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sess_pipeline_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sess_readahead"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sess_readahead_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sess_linger"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sess_linger_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sess_herd"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sess_herd_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "shm_records"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "shm_records_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "shm_writes"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "shm_writes_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "shm_flushes"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "shm_flushes_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "shm_cont"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "shm_cont_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "shm_cycles"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "shm_cycles_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sm_nreq"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sm_nreq_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sm_nobj"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sm_nobj_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sm_balloc"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sm_balloc_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sm_bfree"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sm_bfree_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sma_nreq"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sma_nreq_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sma_nobj"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sma_nobj_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sma_nbytes"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sma_nbytes_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sma_balloc"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sma_balloc_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sma_bfree"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sma_bfree_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sms_nreq"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sms_nreq_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sms_nobj"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sms_nobj_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sms_nbytes"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sms_nbytes_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sms_balloc"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sms_balloc_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sms_bfree"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "sms_bfree_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_req"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_req_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_vcl"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_vcl_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_vcl_avail"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_vcl_avail_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_vcl_discard"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_vcl_discard_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_add"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_add_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_retire"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_retire_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_obj_test"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_obj_test_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_re_test"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_re_test_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_dups"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "n_purge_dups_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "hcb_nolock"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "hcb_nolock_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "hcb_lock"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "hcb_lock_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "hcb_insert"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "hcb_insert_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "esi_parse"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "esi_parse_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "esi_errors"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "esi_errors_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "accept_fail"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "accept_fail_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "client_drop_late"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "client_drop_late_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "uptime"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "uptime_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_retry"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "backend_retry_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "dir_dns_lookups"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "dir_dns_lookups_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "dir_dns_failed"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "dir_dns_failed_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "dir_dns_hit"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "dir_dns_hit_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "dir_dns_cache_full"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "dir_dns_cache_full_delta"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "cache_hit_ratio"
-      value_threshold = 1.0
-  }
-  metric {
-      name = "cache_hit_pct"
-      value_threshold = 1.0
-  }
+metric {
+    # Fetch zero len (float)
+    # display format: %0.2f
+    name = "fetch_zero"
+    value_threshold = 1.0
+}
+metric {
+    # Total pass (float)
+    # display format: %0.2f
+    name = "s_pass"
+    value_threshold = 1.0
+}
+metric {
+    # Backend conn. success (float)
+    # display format: %0.2f
+    name = "backend_conn"
+    value_threshold = 1.0
+}
+metric {
+    # Fetch chunked (float)
+    # display format: %0.2f
+    name = "fetch_chunked"
+    value_threshold = 1.0
+}
+metric {
+    # N worker threads limited (float)
+    # display format: %0.2f
+    name = "n_wrk_max"
+    value_threshold = 1.0
+}
+metric {
+    # cache_hit_pct (uint)
+    # display format: %0.2f%%
+    name = "cache_hit_pct"
+    value_threshold = 1.0
+}
+metric {
+    # N unresurrected objects (uint)
+    # display format: %u
+    name = "n_vampireobject"
+    value_threshold = 1.0
+}
+metric {
+    # N vcl total (float)
+    # display format: %0.2f
+    name = "n_vcl"
+    value_threshold = 1.0
+}
+metric {
+    # Objects ESI parsed (unlock) (float)
+    # display format: %0.2f
+    name = "esi_parse"
+    value_threshold = 1.0
+}
+metric {
+    # ESI parse errors (unlock) (float)
+    # display format: %0.2f
+    name = "esi_errors"
+    value_threshold = 1.0
+}
+metric {
+    # N vcl available (float)
+    # display format: %0.2f
+    name = "n_vcl_avail"
+    value_threshold = 1.0
+}
+metric {
+    # DNS director cached lookups hit (float)
+    # display format: %0.2f
+    name = "dir_dns_hit"
+    value_threshold = 1.0
+}
+metric {
+    # Total fetch (float)
+    # display format: %0.2f
+    name = "s_fetch"
+    value_threshold = 1.0
+}
+metric {
+    # N duplicate purges removed (float)
+    # display format: %0.2f
+    name = "n_purge_dups"
+    value_threshold = 1.0
+}
+metric {
+    # SMA bytes free (uint)
+    # display format: %u
+    name = "sma_bfree"
+    value_threshold = 1.0
+}
+metric {
+    # Connection dropped late (float)
+    # display format: %0.2f
+    name = "client_drop_late"
+    value_threshold = 1.0
+}
+metric {
+    # SHM cycles through buffer (float)
+    # display format: %0.2f
+    name = "shm_cycles"
+    value_threshold = 1.0
+}
+metric {
+    # N objects on deathrow (uint)
+    # display format: %u
+    name = "n_deathrow"
+    value_threshold = 1.0
+}
+metric {
+    # Fetch had bad headers (float)
+    # display format: %0.2f
+    name = "fetch_bad"
+    value_threshold = 1.0
+}
+metric {
+    # Backend conn. failures (float)
+    # display format: %0.2f
+    name = "backend_fail"
+    value_threshold = 1.0
+}
+metric {
+    # Total pipe (float)
+    # display format: %0.2f
+    name = "s_pipe"
+    value_threshold = 1.0
+}
+metric {
+    # N large free smf (uint)
+    # display format: %u
+    name = "n_smf_large"
+    value_threshold = 1.0
+}
+metric {
+    # N total active purges (uint)
+    # display format: %u
+    name = "n_purge"
+    value_threshold = 1.0
+}
+metric {
+    # Backend conn. not attempted (float)
+    # display format: %0.2f
+    name = "backend_unhealthy"
+    value_threshold = 1.0
+}
+metric {
+    # Fetch with Length (float)
+    # display format: %0.2f
+    name = "fetch_length"
+    value_threshold = 1.0
+}
+metric {
+    # N vcl discarded (float)
+    # display format: %0.2f
+    name = "n_vcl_discard"
+    value_threshold = 1.0
+}
+metric {
+    # HCB Inserts (float)
+    # display format: %0.2f
+    name = "hcb_insert"
+    value_threshold = 1.0
+}
+metric {
+    # Backend conn. recycles (float)
+    # display format: %0.2f
+    name = "backend_recycle"
+    value_threshold = 1.0
+}
+metric {
+    # cache_hit_ratio (uint)
+    # display format: %0.2f
+    name = "cache_hit_ratio"
+    value_threshold = 1.0
+}
+metric {
+    # N small free smf (uint)
+    # display format: %u
+    name = "n_smf_frag"
+    value_threshold = 1.0
+}
+metric {
+    # outstanding allocations (uint)
+    # display format: %u
+    name = "sm_nobj"
+    value_threshold = 1.0
+}
+metric {
+    # SHM flushes due to overflow (float)
+    # display format: %0.2f
+    name = "shm_flushes"
+    value_threshold = 1.0
+}
+metric {
+    # SMA bytes allocated (uint)
+    # display format: %u
+    name = "sma_balloc"
+    value_threshold = 1.0
+}
+metric {
+    # Backend requests made (float)
+    # display format: %0.2f
+    name = "backend_req"
+    value_threshold = 1.0
+}
+metric {
+    # N objects tested (float)
+    # display format: %0.2f
+    name = "n_purge_obj_test"
+    value_threshold = 1.0
+}
+metric {
+    # N new purges added (float)
+    # display format: %0.2f
+    name = "n_purge_add"
+    value_threshold = 1.0
+}
+metric {
+    # N backends (uint)
+    # display format: %u
+    name = "n_backend"
+    value_threshold = 1.0
+}
+metric {
+    # SMA outstanding allocations (uint)
+    # display format: %u
+    name = "sma_nobj"
+    value_threshold = 1.0
+}
+metric {
+    # Total Sessions (float)
+    # display format: %0.2f
+    name = "s_sess"
+    value_threshold = 1.0
+}
+metric {
+    # N regexps tested against (float)
+    # display format: %0.2f
+    name = "n_purge_re_test"
+    value_threshold = 1.0
+}
+metric {
+    # Client requests received (float)
+    # display format: %0.2f
+    name = "client_req"
+    value_threshold = 1.0
+}
+metric {
+    # Total body bytes (float)
+    # display format: %0.2f
+    name = "s_bodybytes"
+    value_threshold = 1.0
+}
+metric {
+    # SMA allocator requests (float)
+    # display format: %0.2f
+    name = "sma_nreq"
+    value_threshold = 1.0
+}
+metric {
+    # Backend conn. reuses (float)
+    # display format: %0.2f
+    name = "backend_reuse"
+    value_threshold = 1.0
+}
+metric {
+    # Cache hits for pass (float)
+    # display format: %0.2f
+    name = "cache_hitpass"
+    value_threshold = 1.0
+}
+metric {
+    # Session Closed (float)
+    # display format: %0.2f
+    name = "sess_closed"
+    value_threshold = 1.0
+}
+metric {
+    # Objects sent with write (float)
+    # display format: %0.2f
+    name = "n_objwrite"
+    value_threshold = 1.0
+}
+metric {
+    # SHM records (float)
+    # display format: %0.2f
+    name = "shm_records"
+    value_threshold = 1.0
+}
+metric {
+    # N worker threads created (float)
+    # display format: %0.2f
+    name = "n_wrk_create"
+    value_threshold = 1.0
+}
+metric {
+    # Backend conn. was closed (float)
+    # display format: %0.2f
+    name = "backend_toolate"
+    value_threshold = 1.0
+}
+metric {
+    # SMS allocator requests (float)
+    # display format: %0.2f
+    name = "sms_nreq"
+    value_threshold = 1.0
+}
+metric {
+    # Fetch head (float)
+    # display format: %0.2f
+    name = "fetch_head"
+    value_threshold = 1.0
+}
+metric {
+    # Accept failures (float)
+    # display format: %0.2f
+    name = "accept_fail"
+    value_threshold = 1.0
+}
+metric {
+    # Session Linger (float)
+    # display format: %0.2f
+    name = "sess_linger"
+    value_threshold = 1.0
+}
+metric {
+    # N overflowed work requests (float)
+    # display format: %0.2f
+    name = "n_wrk_overflow"
+    value_threshold = 1.0
+}
+metric {
+    # DNS director failed lookups (float)
+    # display format: %0.2f
+    name = "dir_dns_failed"
+    value_threshold = 1.0
+}
+metric {
+    # Fetch wanted close (float)
+    # display format: %0.2f
+    name = "fetch_close"
+    value_threshold = 1.0
+}
+metric {
+    # N worker threads (uint)
+    # display format: %u
+    name = "n_wrk"
+    value_threshold = 1.0
+}
+metric {
+    # Client connections accepted (float)
+    # display format: %0.2f
+    name = "client_conn"
+    value_threshold = 1.0
+}
+metric {
+    # Backend conn. unused (float)
+    # display format: %0.2f
+    name = "backend_unused"
+    value_threshold = 1.0
+}
+metric {
+    # N struct vbe_conn (uint)
+    # display format: %u
+    name = "n_vbe_conn"
+    value_threshold = 1.0
+}
+metric {
+    # N queued work requests (float)
+    # display format: %0.2f
+    name = "n_wrk_queue"
+    value_threshold = 1.0
+}
+metric {
+    # HTTP header overflows (float)
+    # display format: %0.2f
+    name = "losthdr"
+    value_threshold = 1.0
+}
+metric {
+    # Fetch EOF (float)
+    # display format: %0.2f
+    name = "fetch_eof"
+    value_threshold = 1.0
+}
+metric {
+    # N LRU nuked objects (uint)
+    # display format: %u
+    name = "n_lru_nuked"
+    value_threshold = 1.0
+}
+metric {
+    # N struct objecthead (uint)
+    # display format: %u
+    name = "n_objecthead"
+    value_threshold = 1.0
+}
+metric {
+    # SMS outstanding allocations (uint)
+    # display format: %u
+    name = "sms_nobj"
+    value_threshold = 1.0
+}
+metric {
+    # DNS director lookups (float)
+    # display format: %0.2f
+    name = "dir_dns_lookups"
+    value_threshold = 1.0
+}
+metric {
+    # SMA outstanding bytes (uint)
+    # display format: %u
+    name = "sma_nbytes"
+    value_threshold = 1.0
+}
+metric {
+    # Cache hits (float)
+    # display format: %0.2f
+    name = "cache_hit"
+    value_threshold = 1.0
+}
+metric {
+    # Objects overflowing workspace (float)
+    # display format: %0.2f
+    name = "n_objoverflow"
+    value_threshold = 1.0
+}
+metric {
+    # Fetch failed (float)
+    # display format: %0.2f
+    name = "fetch_failed"
+    value_threshold = 1.0
+}
+metric {
+    # N LRU moved objects (uint)
+    # display format: %u
+    name = "n_lru_moved"
+    value_threshold = 1.0
+}
+metric {
+    # N struct object (uint)
+    # display format: %u
+    name = "n_object"
+    value_threshold = 1.0
+}
+metric {
+    # bytes allocated (uint)
+    # display format: %u
+    name = "sm_balloc"
+    value_threshold = 1.0
+}
+metric {
+    # SHM MTX contention (float)
+    # display format: %0.2f
+    name = "shm_cont"
+    value_threshold = 1.0
+}
+metric {
+    # N worker threads not created (float)
+    # display format: %0.2f
+    name = "n_wrk_failed"
+    value_threshold = 1.0
+}
+metric {
+    # Client uptime (float)
+    # display format: %0.2f
+    name = "uptime"
+    value_threshold = 1.0
+}
+metric {
+    # Connection dropped, no sess/wrk (float)
+    # display format: %0.2f
+    name = "client_drop"
+    value_threshold = 1.0
+}
+metric {
+    # N struct sess (uint)
+    # display format: %u
+    name = "n_sess"
+    value_threshold = 1.0
+}
+metric {
+    # Session Read Ahead (float)
+    # display format: %0.2f
+    name = "sess_readahead"
+    value_threshold = 1.0
+}
+metric {
+    # SHM writes (float)
+    # display format: %0.2f
+    name = "shm_writes"
+    value_threshold = 1.0
+}
+metric {
+    # Cache misses (float)
+    # display format: %0.2f
+    name = "cache_miss"
+    value_threshold = 1.0
+}
+metric {
+    # N old purges deleted (float)
+    # display format: %0.2f
+    name = "n_purge_retire"
+    value_threshold = 1.0
+}
+metric {
+    # HCB Lookups with lock (float)
+    # display format: %0.2f
+    name = "hcb_lock"
+    value_threshold = 1.0
+}
+metric {
+    # Objects sent with sendfile (float)
+    # display format: %0.2f
+    name = "n_objsendfile"
+    value_threshold = 1.0
+}
+metric {
+    # Total Requests (float)
+    # display format: %0.2f
+    name = "s_req"
+    value_threshold = 1.0
+}
+metric {
+    # bytes free (uint)
+    # display format: %u
+    name = "sm_bfree"
+    value_threshold = 1.0
+}
+metric {
+    # Backend conn. retry (float)
+    # display format: %0.2f
+    name = "backend_retry"
+    value_threshold = 1.0
+}
+metric {
+    # SMS bytes allocated (uint)
+    # display format: %u
+    name = "sms_balloc"
+    value_threshold = 1.0
+}
+metric {
+    # N dropped work requests (float)
+    # display format: %0.2f
+    name = "n_wrk_drop"
+    value_threshold = 1.0
+}
+metric {
+    # Session Pipeline (float)
+    # display format: %0.2f
+    name = "sess_pipeline"
+    value_threshold = 1.0
+}
+metric {
+    # N LRU saved objects (uint)
+    # display format: %u
+    name = "n_lru_saved"
+    value_threshold = 1.0
+}
+metric {
+    # DNS director full dnscache (float)
+    # display format: %0.2f
+    name = "dir_dns_cache_full"
+    value_threshold = 1.0
+}
+metric {
+    # SMS bytes freed (uint)
+    # display format: %u
+    name = "sms_bfree"
+    value_threshold = 1.0
+}
+metric {
+    # HCB Lookups without lock (float)
+    # display format: %0.2f
+    name = "hcb_nolock"
+    value_threshold = 1.0
+}
+metric {
+    # allocator requests (float)
+    # display format: %0.2f
+    name = "sm_nreq"
+    value_threshold = 1.0
+}
+metric {
+    # Fetch pre HTTP/1.1 closed (float)
+    # display format: %0.2f
+    name = "fetch_oldhttp"
+    value_threshold = 1.0
+}
+metric {
+    # SMS outstanding bytes (uint)
+    # display format: %u
+    name = "sms_nbytes"
+    value_threshold = 1.0
+}
+metric {
+    # Backend conn. too many (float)
+    # display format: %0.2f
+    name = "backend_busy"
+    value_threshold = 1.0
+}
+metric {
+    # Session herd (float)
+    # display format: %0.2f
+    name = "sess_herd"
+    value_threshold = 1.0
+}
+metric {
+    # N struct objectcore (uint)
+    # display format: %u
+    name = "n_objectcore"
+    value_threshold = 1.0
+}
+metric {
+    # Total header bytes (float)
+    # display format: %0.2f
+    name = "s_hdrbytes"
+    value_threshold = 1.0
+}
+metric {
+    # N struct smf (uint)
+    # display format: %u
+    name = "n_smf"
+    value_threshold = 1.0
+}
+metric {
+    # N struct sess_mem (uint)
+    # display format: %u
+    name = "n_sess_mem"
+    value_threshold = 1.0
+}
+metric {
+    # N expired objects (uint)
+    # display format: %u
+    name = "n_expired"
+    value_threshold = 1.0
+}
 
 }
 
