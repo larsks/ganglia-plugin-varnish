@@ -15,7 +15,7 @@ setup(name='ganglia-plugin-varnish',
         description='Ganglia gmond plugin for Varnish',
         long_description=read('README.rst'),
         author='Lars Kellogg-Stedman',
-        author_email='lars@seas.harvard.edu',
+        author_email='lars@oddbit.com',
         packages=['varnish'],
         )
 
