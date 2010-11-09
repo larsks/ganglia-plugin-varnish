@@ -16,7 +16,7 @@ install: all
 	#
 	install -d -m 755 $(DESTDIR)$(libdir)/ganglia/python_modules
 	install -m 755 lib/varnishstats.py \
-		$(DESTDIR)$(libdir)/ganglia/python-modules
+		$(DESTDIR)$(libdir)/ganglia/python_modules
 	#
 	install -d -m 755 $(DESTDIR)$(sysconfdir)/ganglia/conf.d
 	install -m 755 varnishstats.pyconf \
