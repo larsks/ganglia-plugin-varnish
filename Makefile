@@ -19,6 +19,6 @@ install: all
 		$(DESTDIR)$(libdir)/ganglia/python_modules
 	#
 	install -d -m 755 $(DESTDIR)$(sysconfdir)/ganglia/conf.d
-	install -m 755 varnish_plugin.pyconf \
+	install -m 644 varnish_plugin.pyconf \
 		$(DESTDIR)$(sysconfdir)/ganglia/conf.d/varnish_plugin.pyconf.sample
 
