@@ -1,6 +1,7 @@
 prefix		= /usr
 exec_prefix	= $(prefix)
 libdir		= $(prefix)/lib
+sysconfdir	= /etc
 
 
 ifdef DESTDIR
