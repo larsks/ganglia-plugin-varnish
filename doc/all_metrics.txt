@@ -1,840 +1,1050 @@
 metric {
+    # Client connections accepted (uint)
     name = "client_conn"
     value_threshold = 1.0
 }
 metric {
+    # Client connections accepted (delta) (uint)
     name = "client_conn_delta"
     value_threshold = 1.0
 }
 metric {
+    # Connection dropped, no sess/wrk (uint)
     name = "client_drop"
     value_threshold = 1.0
 }
 metric {
+    # Connection dropped, no sess/wrk (delta) (uint)
     name = "client_drop_delta"
     value_threshold = 1.0
 }
 metric {
+    # Client requests received (uint)
     name = "client_req"
     value_threshold = 1.0
 }
 metric {
+    # Client requests received (delta) (uint)
     name = "client_req_delta"
     value_threshold = 1.0
 }
 metric {
+    # Cache hits (uint)
     name = "cache_hit"
     value_threshold = 1.0
 }
 metric {
+    # Cache hits (delta) (uint)
     name = "cache_hit_delta"
     value_threshold = 1.0
 }
 metric {
+    # Cache hits for pass (uint)
     name = "cache_hitpass"
     value_threshold = 1.0
 }
 metric {
+    # Cache hits for pass (delta) (uint)
     name = "cache_hitpass_delta"
     value_threshold = 1.0
 }
 metric {
+    # Cache misses (uint)
     name = "cache_miss"
     value_threshold = 1.0
 }
 metric {
+    # Cache misses (delta) (uint)
     name = "cache_miss_delta"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. success (uint)
     name = "backend_conn"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. success (delta) (uint)
     name = "backend_conn_delta"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. not attempted (uint)
     name = "backend_unhealthy"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. not attempted (delta) (uint)
     name = "backend_unhealthy_delta"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. too many (uint)
     name = "backend_busy"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. too many (delta) (uint)
     name = "backend_busy_delta"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. failures (uint)
     name = "backend_fail"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. failures (delta) (uint)
     name = "backend_fail_delta"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. reuses (uint)
     name = "backend_reuse"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. reuses (delta) (uint)
     name = "backend_reuse_delta"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. was closed (uint)
     name = "backend_toolate"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. was closed (delta) (uint)
     name = "backend_toolate_delta"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. recycles (uint)
     name = "backend_recycle"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. recycles (delta) (uint)
     name = "backend_recycle_delta"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. unused (uint)
     name = "backend_unused"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. unused (delta) (uint)
     name = "backend_unused_delta"
     value_threshold = 1.0
 }
 metric {
+    # Fetch head (uint)
     name = "fetch_head"
     value_threshold = 1.0
 }
 metric {
+    # Fetch head (delta) (uint)
     name = "fetch_head_delta"
     value_threshold = 1.0
 }
 metric {
+    # Fetch with Length (uint)
     name = "fetch_length"
     value_threshold = 1.0
 }
 metric {
+    # Fetch with Length (delta) (uint)
     name = "fetch_length_delta"
     value_threshold = 1.0
 }
 metric {
+    # Fetch chunked (uint)
     name = "fetch_chunked"
     value_threshold = 1.0
 }
 metric {
+    # Fetch chunked (delta) (uint)
     name = "fetch_chunked_delta"
     value_threshold = 1.0
 }
 metric {
+    # Fetch EOF (uint)
     name = "fetch_eof"
     value_threshold = 1.0
 }
 metric {
+    # Fetch EOF (delta) (uint)
     name = "fetch_eof_delta"
     value_threshold = 1.0
 }
 metric {
+    # Fetch had bad headers (uint)
     name = "fetch_bad"
     value_threshold = 1.0
 }
 metric {
+    # Fetch had bad headers (delta) (uint)
     name = "fetch_bad_delta"
     value_threshold = 1.0
 }
 metric {
+    # Fetch wanted close (uint)
     name = "fetch_close"
     value_threshold = 1.0
 }
 metric {
+    # Fetch wanted close (delta) (uint)
     name = "fetch_close_delta"
     value_threshold = 1.0
 }
 metric {
+    # Fetch pre HTTP/1.1 closed (uint)
     name = "fetch_oldhttp"
     value_threshold = 1.0
 }
 metric {
+    # Fetch pre HTTP/1.1 closed (delta) (uint)
     name = "fetch_oldhttp_delta"
     value_threshold = 1.0
 }
 metric {
+    # Fetch zero len (uint)
     name = "fetch_zero"
     value_threshold = 1.0
 }
 metric {
+    # Fetch zero len (delta) (uint)
     name = "fetch_zero_delta"
     value_threshold = 1.0
 }
 metric {
+    # Fetch failed (uint)
     name = "fetch_failed"
     value_threshold = 1.0
 }
 metric {
+    # Fetch failed (delta) (uint)
     name = "fetch_failed_delta"
     value_threshold = 1.0
 }
 metric {
+    # N struct sess_mem (uint)
     name = "n_sess_mem"
     value_threshold = 1.0
 }
 metric {
+    # N struct sess_mem (delta) (uint)
     name = "n_sess_mem_delta"
     value_threshold = 1.0
 }
 metric {
+    # N struct sess (uint)
     name = "n_sess"
     value_threshold = 1.0
 }
 metric {
+    # N struct sess (delta) (uint)
     name = "n_sess_delta"
     value_threshold = 1.0
 }
 metric {
+    # N struct object (uint)
     name = "n_object"
     value_threshold = 1.0
 }
 metric {
+    # N struct object (delta) (uint)
     name = "n_object_delta"
     value_threshold = 1.0
 }
 metric {
+    # N unresurrected objects (uint)
     name = "n_vampireobject"
     value_threshold = 1.0
 }
 metric {
+    # N unresurrected objects (delta) (uint)
     name = "n_vampireobject_delta"
     value_threshold = 1.0
 }
 metric {
+    # N struct objectcore (uint)
     name = "n_objectcore"
     value_threshold = 1.0
 }
 metric {
+    # N struct objectcore (delta) (uint)
     name = "n_objectcore_delta"
     value_threshold = 1.0
 }
 metric {
+    # N struct objecthead (uint)
     name = "n_objecthead"
     value_threshold = 1.0
 }
 metric {
+    # N struct objecthead (delta) (uint)
     name = "n_objecthead_delta"
     value_threshold = 1.0
 }
 metric {
+    # N struct smf (uint)
     name = "n_smf"
     value_threshold = 1.0
 }
 metric {
+    # N struct smf (delta) (uint)
     name = "n_smf_delta"
     value_threshold = 1.0
 }
 metric {
+    # N small free smf (uint)
     name = "n_smf_frag"
     value_threshold = 1.0
 }
 metric {
+    # N small free smf (delta) (uint)
     name = "n_smf_frag_delta"
     value_threshold = 1.0
 }
 metric {
+    # N large free smf (uint)
     name = "n_smf_large"
     value_threshold = 1.0
 }
 metric {
+    # N large free smf (delta) (uint)
     name = "n_smf_large_delta"
     value_threshold = 1.0
 }
 metric {
+    # N struct vbe_conn (uint)
     name = "n_vbe_conn"
     value_threshold = 1.0
 }
 metric {
+    # N struct vbe_conn (delta) (uint)
     name = "n_vbe_conn_delta"
     value_threshold = 1.0
 }
 metric {
+    # N worker threads (uint)
     name = "n_wrk"
     value_threshold = 1.0
 }
 metric {
+    # N worker threads (delta) (uint)
     name = "n_wrk_delta"
     value_threshold = 1.0
 }
 metric {
+    # N worker threads created (uint)
     name = "n_wrk_create"
     value_threshold = 1.0
 }
 metric {
+    # N worker threads created (delta) (uint)
     name = "n_wrk_create_delta"
     value_threshold = 1.0
 }
 metric {
+    # N worker threads not created (uint)
     name = "n_wrk_failed"
     value_threshold = 1.0
 }
 metric {
+    # N worker threads not created (delta) (uint)
     name = "n_wrk_failed_delta"
     value_threshold = 1.0
 }
 metric {
+    # N worker threads limited (uint)
     name = "n_wrk_max"
     value_threshold = 1.0
 }
 metric {
+    # N worker threads limited (delta) (uint)
     name = "n_wrk_max_delta"
     value_threshold = 1.0
 }
 metric {
+    # N queued work requests (uint)
     name = "n_wrk_queue"
     value_threshold = 1.0
 }
 metric {
+    # N queued work requests (delta) (uint)
     name = "n_wrk_queue_delta"
     value_threshold = 1.0
 }
 metric {
+    # N overflowed work requests (uint)
     name = "n_wrk_overflow"
     value_threshold = 1.0
 }
 metric {
+    # N overflowed work requests (delta) (uint)
     name = "n_wrk_overflow_delta"
     value_threshold = 1.0
 }
 metric {
+    # N dropped work requests (uint)
     name = "n_wrk_drop"
     value_threshold = 1.0
 }
 metric {
+    # N dropped work requests (delta) (uint)
     name = "n_wrk_drop_delta"
     value_threshold = 1.0
 }
 metric {
+    # N backends (uint)
     name = "n_backend"
     value_threshold = 1.0
 }
 metric {
+    # N backends (delta) (uint)
     name = "n_backend_delta"
     value_threshold = 1.0
 }
 metric {
+    # N expired objects (uint)
     name = "n_expired"
     value_threshold = 1.0
 }
 metric {
+    # N expired objects (delta) (uint)
     name = "n_expired_delta"
     value_threshold = 1.0
 }
 metric {
+    # N LRU nuked objects (uint)
     name = "n_lru_nuked"
     value_threshold = 1.0
 }
 metric {
+    # N LRU nuked objects (delta) (uint)
     name = "n_lru_nuked_delta"
     value_threshold = 1.0
 }
 metric {
+    # N LRU saved objects (uint)
     name = "n_lru_saved"
     value_threshold = 1.0
 }
 metric {
+    # N LRU saved objects (delta) (uint)
     name = "n_lru_saved_delta"
     value_threshold = 1.0
 }
 metric {
+    # N LRU moved objects (uint)
     name = "n_lru_moved"
     value_threshold = 1.0
 }
 metric {
+    # N LRU moved objects (delta) (uint)
     name = "n_lru_moved_delta"
     value_threshold = 1.0
 }
 metric {
+    # N objects on deathrow (uint)
     name = "n_deathrow"
     value_threshold = 1.0
 }
 metric {
+    # N objects on deathrow (delta) (uint)
     name = "n_deathrow_delta"
     value_threshold = 1.0
 }
 metric {
+    # HTTP header overflows (uint)
     name = "losthdr"
     value_threshold = 1.0
 }
 metric {
+    # HTTP header overflows (delta) (uint)
     name = "losthdr_delta"
     value_threshold = 1.0
 }
 metric {
+    # Objects sent with sendfile (uint)
     name = "n_objsendfile"
     value_threshold = 1.0
 }
 metric {
+    # Objects sent with sendfile (delta) (uint)
     name = "n_objsendfile_delta"
     value_threshold = 1.0
 }
 metric {
+    # Objects sent with write (uint)
     name = "n_objwrite"
     value_threshold = 1.0
 }
 metric {
+    # Objects sent with write (delta) (uint)
     name = "n_objwrite_delta"
     value_threshold = 1.0
 }
 metric {
+    # Objects overflowing workspace (uint)
     name = "n_objoverflow"
     value_threshold = 1.0
 }
 metric {
+    # Objects overflowing workspace (delta) (uint)
     name = "n_objoverflow_delta"
     value_threshold = 1.0
 }
 metric {
+    # Total Sessions (uint)
     name = "s_sess"
     value_threshold = 1.0
 }
 metric {
+    # Total Sessions (delta) (uint)
     name = "s_sess_delta"
     value_threshold = 1.0
 }
 metric {
+    # Total Requests (uint)
     name = "s_req"
     value_threshold = 1.0
 }
 metric {
+    # Total Requests (delta) (uint)
     name = "s_req_delta"
     value_threshold = 1.0
 }
 metric {
+    # Total pipe (uint)
     name = "s_pipe"
     value_threshold = 1.0
 }
 metric {
+    # Total pipe (delta) (uint)
     name = "s_pipe_delta"
     value_threshold = 1.0
 }
 metric {
+    # Total pass (uint)
     name = "s_pass"
     value_threshold = 1.0
 }
 metric {
+    # Total pass (delta) (uint)
     name = "s_pass_delta"
     value_threshold = 1.0
 }
 metric {
+    # Total fetch (uint)
     name = "s_fetch"
     value_threshold = 1.0
 }
 metric {
+    # Total fetch (delta) (uint)
     name = "s_fetch_delta"
     value_threshold = 1.0
 }
 metric {
+    # Total header bytes (uint)
     name = "s_hdrbytes"
     value_threshold = 1.0
 }
 metric {
+    # Total header bytes (delta) (uint)
     name = "s_hdrbytes_delta"
     value_threshold = 1.0
 }
 metric {
+    # Total body bytes (uint)
     name = "s_bodybytes"
     value_threshold = 1.0
 }
 metric {
+    # Total body bytes (delta) (uint)
     name = "s_bodybytes_delta"
     value_threshold = 1.0
 }
 metric {
+    # Session Closed (uint)
     name = "sess_closed"
     value_threshold = 1.0
 }
 metric {
+    # Session Closed (delta) (uint)
     name = "sess_closed_delta"
     value_threshold = 1.0
 }
 metric {
+    # Session Pipeline (uint)
     name = "sess_pipeline"
     value_threshold = 1.0
 }
 metric {
+    # Session Pipeline (delta) (uint)
     name = "sess_pipeline_delta"
     value_threshold = 1.0
 }
 metric {
+    # Session Read Ahead (uint)
     name = "sess_readahead"
     value_threshold = 1.0
 }
 metric {
+    # Session Read Ahead (delta) (uint)
     name = "sess_readahead_delta"
     value_threshold = 1.0
 }
 metric {
+    # Session Linger (uint)
     name = "sess_linger"
     value_threshold = 1.0
 }
 metric {
+    # Session Linger (delta) (uint)
     name = "sess_linger_delta"
     value_threshold = 1.0
 }
 metric {
+    # Session herd (uint)
     name = "sess_herd"
     value_threshold = 1.0
 }
 metric {
+    # Session herd (delta) (uint)
     name = "sess_herd_delta"
     value_threshold = 1.0
 }
 metric {
+    # SHM records (uint)
     name = "shm_records"
     value_threshold = 1.0
 }
 metric {
+    # SHM records (delta) (uint)
     name = "shm_records_delta"
     value_threshold = 1.0
 }
 metric {
+    # SHM writes (uint)
     name = "shm_writes"
     value_threshold = 1.0
 }
 metric {
+    # SHM writes (delta) (uint)
     name = "shm_writes_delta"
     value_threshold = 1.0
 }
 metric {
+    # SHM flushes due to overflow (uint)
     name = "shm_flushes"
     value_threshold = 1.0
 }
 metric {
+    # SHM flushes due to overflow (delta) (uint)
     name = "shm_flushes_delta"
     value_threshold = 1.0
 }
 metric {
+    # SHM MTX contention (uint)
     name = "shm_cont"
     value_threshold = 1.0
 }
 metric {
+    # SHM MTX contention (delta) (uint)
     name = "shm_cont_delta"
     value_threshold = 1.0
 }
 metric {
+    # SHM cycles through buffer (uint)
     name = "shm_cycles"
     value_threshold = 1.0
 }
 metric {
+    # SHM cycles through buffer (delta) (uint)
     name = "shm_cycles_delta"
     value_threshold = 1.0
 }
 metric {
+    # allocator requests (uint)
     name = "sm_nreq"
     value_threshold = 1.0
 }
 metric {
+    # allocator requests (delta) (uint)
     name = "sm_nreq_delta"
     value_threshold = 1.0
 }
 metric {
+    # outstanding allocations (uint)
     name = "sm_nobj"
     value_threshold = 1.0
 }
 metric {
+    # outstanding allocations (delta) (uint)
     name = "sm_nobj_delta"
     value_threshold = 1.0
 }
 metric {
+    # bytes allocated (uint)
     name = "sm_balloc"
     value_threshold = 1.0
 }
 metric {
+    # bytes allocated (delta) (uint)
     name = "sm_balloc_delta"
     value_threshold = 1.0
 }
 metric {
+    # bytes free (uint)
     name = "sm_bfree"
     value_threshold = 1.0
 }
 metric {
+    # bytes free (delta) (uint)
     name = "sm_bfree_delta"
     value_threshold = 1.0
 }
 metric {
+    # SMA allocator requests (uint)
     name = "sma_nreq"
     value_threshold = 1.0
 }
 metric {
+    # SMA allocator requests (delta) (uint)
     name = "sma_nreq_delta"
     value_threshold = 1.0
 }
 metric {
+    # SMA outstanding allocations (uint)
     name = "sma_nobj"
     value_threshold = 1.0
 }
 metric {
+    # SMA outstanding allocations (delta) (uint)
     name = "sma_nobj_delta"
     value_threshold = 1.0
 }
 metric {
+    # SMA outstanding bytes (uint)
     name = "sma_nbytes"
     value_threshold = 1.0
 }
 metric {
+    # SMA outstanding bytes (delta) (uint)
     name = "sma_nbytes_delta"
     value_threshold = 1.0
 }
 metric {
+    # SMA bytes allocated (uint)
     name = "sma_balloc"
     value_threshold = 1.0
 }
 metric {
+    # SMA bytes allocated (delta) (uint)
     name = "sma_balloc_delta"
     value_threshold = 1.0
 }
 metric {
+    # SMA bytes free (uint)
     name = "sma_bfree"
     value_threshold = 1.0
 }
 metric {
+    # SMA bytes free (delta) (uint)
     name = "sma_bfree_delta"
     value_threshold = 1.0
 }
 metric {
+    # SMS allocator requests (uint)
     name = "sms_nreq"
     value_threshold = 1.0
 }
 metric {
+    # SMS allocator requests (delta) (uint)
     name = "sms_nreq_delta"
     value_threshold = 1.0
 }
 metric {
+    # SMS outstanding allocations (uint)
     name = "sms_nobj"
     value_threshold = 1.0
 }
 metric {
+    # SMS outstanding allocations (delta) (uint)
     name = "sms_nobj_delta"
     value_threshold = 1.0
 }
 metric {
+    # SMS outstanding bytes (uint)
     name = "sms_nbytes"
     value_threshold = 1.0
 }
 metric {
+    # SMS outstanding bytes (delta) (uint)
     name = "sms_nbytes_delta"
     value_threshold = 1.0
 }
 metric {
+    # SMS bytes allocated (uint)
     name = "sms_balloc"
     value_threshold = 1.0
 }
 metric {
+    # SMS bytes allocated (delta) (uint)
     name = "sms_balloc_delta"
     value_threshold = 1.0
 }
 metric {
+    # SMS bytes freed (uint)
     name = "sms_bfree"
     value_threshold = 1.0
 }
 metric {
+    # SMS bytes freed (delta) (uint)
     name = "sms_bfree_delta"
     value_threshold = 1.0
 }
 metric {
+    # Backend requests made (uint)
     name = "backend_req"
     value_threshold = 1.0
 }
 metric {
+    # Backend requests made (delta) (uint)
     name = "backend_req_delta"
     value_threshold = 1.0
 }
 metric {
+    # N vcl total (uint)
     name = "n_vcl"
     value_threshold = 1.0
 }
 metric {
+    # N vcl total (delta) (uint)
     name = "n_vcl_delta"
     value_threshold = 1.0
 }
 metric {
+    # N vcl available (uint)
     name = "n_vcl_avail"
     value_threshold = 1.0
 }
 metric {
+    # N vcl available (delta) (uint)
     name = "n_vcl_avail_delta"
     value_threshold = 1.0
 }
 metric {
+    # N vcl discarded (uint)
     name = "n_vcl_discard"
     value_threshold = 1.0
 }
 metric {
+    # N vcl discarded (delta) (uint)
     name = "n_vcl_discard_delta"
     value_threshold = 1.0
 }
 metric {
+    # N total active purges (uint)
     name = "n_purge"
     value_threshold = 1.0
 }
 metric {
+    # N total active purges (delta) (uint)
     name = "n_purge_delta"
     value_threshold = 1.0
 }
 metric {
+    # N new purges added (uint)
     name = "n_purge_add"
     value_threshold = 1.0
 }
 metric {
+    # N new purges added (delta) (uint)
     name = "n_purge_add_delta"
     value_threshold = 1.0
 }
 metric {
+    # N old purges deleted (uint)
     name = "n_purge_retire"
     value_threshold = 1.0
 }
 metric {
+    # N old purges deleted (delta) (uint)
     name = "n_purge_retire_delta"
     value_threshold = 1.0
 }
 metric {
+    # N objects tested (uint)
     name = "n_purge_obj_test"
     value_threshold = 1.0
 }
 metric {
+    # N objects tested (delta) (uint)
     name = "n_purge_obj_test_delta"
     value_threshold = 1.0
 }
 metric {
+    # N regexps tested against (uint)
     name = "n_purge_re_test"
     value_threshold = 1.0
 }
 metric {
+    # N regexps tested against (delta) (uint)
     name = "n_purge_re_test_delta"
     value_threshold = 1.0
 }
 metric {
+    # N duplicate purges removed (uint)
     name = "n_purge_dups"
     value_threshold = 1.0
 }
 metric {
+    # N duplicate purges removed (delta) (uint)
     name = "n_purge_dups_delta"
     value_threshold = 1.0
 }
 metric {
+    # HCB Lookups without lock (uint)
     name = "hcb_nolock"
     value_threshold = 1.0
 }
 metric {
+    # HCB Lookups without lock (delta) (uint)
     name = "hcb_nolock_delta"
     value_threshold = 1.0
 }
 metric {
+    # HCB Lookups with lock (uint)
     name = "hcb_lock"
     value_threshold = 1.0
 }
 metric {
+    # HCB Lookups with lock (delta) (uint)
     name = "hcb_lock_delta"
     value_threshold = 1.0
 }
 metric {
+    # HCB Inserts (uint)
     name = "hcb_insert"
     value_threshold = 1.0
 }
 metric {
+    # HCB Inserts (delta) (uint)
     name = "hcb_insert_delta"
     value_threshold = 1.0
 }
 metric {
+    # Objects ESI parsed (unlock) (uint)
     name = "esi_parse"
     value_threshold = 1.0
 }
 metric {
+    # Objects ESI parsed (unlock) (delta) (uint)
     name = "esi_parse_delta"
     value_threshold = 1.0
 }
 metric {
+    # ESI parse errors (unlock) (uint)
     name = "esi_errors"
     value_threshold = 1.0
 }
 metric {
+    # ESI parse errors (unlock) (delta) (uint)
     name = "esi_errors_delta"
     value_threshold = 1.0
 }
 metric {
+    # Accept failures (uint)
     name = "accept_fail"
     value_threshold = 1.0
 }
 metric {
+    # Accept failures (delta) (uint)
     name = "accept_fail_delta"
     value_threshold = 1.0
 }
 metric {
+    # Connection dropped late (uint)
     name = "client_drop_late"
     value_threshold = 1.0
 }
 metric {
+    # Connection dropped late (delta) (uint)
     name = "client_drop_late_delta"
     value_threshold = 1.0
 }
 metric {
+    # Client uptime (uint)
     name = "uptime"
     value_threshold = 1.0
 }
 metric {
+    # Client uptime (delta) (uint)
     name = "uptime_delta"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. retry (uint)
     name = "backend_retry"
     value_threshold = 1.0
 }
 metric {
+    # Backend conn. retry (delta) (uint)
     name = "backend_retry_delta"
     value_threshold = 1.0
 }
 metric {
+    # DNS director lookups (uint)
     name = "dir_dns_lookups"
     value_threshold = 1.0
 }
 metric {
+    # DNS director lookups (delta) (uint)
     name = "dir_dns_lookups_delta"
     value_threshold = 1.0
 }
 metric {
+    # DNS director failed lookups (uint)
     name = "dir_dns_failed"
     value_threshold = 1.0
 }
 metric {
+    # DNS director failed lookups (delta) (uint)
     name = "dir_dns_failed_delta"
     value_threshold = 1.0
 }
 metric {
+    # DNS director cached lookups hit (uint)
     name = "dir_dns_hit"
     value_threshold = 1.0
 }
 metric {
+    # DNS director cached lookups hit (delta) (uint)
     name = "dir_dns_hit_delta"
     value_threshold = 1.0
 }
 metric {
+    # DNS director full dnscache (uint)
     name = "dir_dns_cache_full"
     value_threshold = 1.0
 }
 metric {
+    # DNS director full dnscache (delta) (uint)
     name = "dir_dns_cache_full_delta"
     value_threshold = 1.0
 }
 metric {
+    # Cache hit/miss ratio (float)
     name = "cache_hit_ratio"
     value_threshold = 1.0
 }
 metric {
+    # Cache hit percent (float)
     name = "cache_hit_pct"
     value_threshold = 1.0
 }
