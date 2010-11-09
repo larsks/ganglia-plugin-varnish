@@ -6,6 +6,7 @@ import optparse
 import varnish.stats
 
 METRIC = '''metric {
+    # %(description)s (%(value_type)s)
     name = "%(name)s"
     value_threshold = 1.0
 }'''
