@@ -1,5 +1,5 @@
 import subprocess
-import lxml
+import lxml.etree
 
 import metrics
 
