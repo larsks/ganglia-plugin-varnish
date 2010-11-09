@@ -8,7 +8,7 @@ Version:	1
 Release:	4%{?dist}
 Summary:	Ganglia metric plugin for Varnish.
 
-Group:		SEAS/IRCS
+Group:		System Environment/Base
 License:	BSD
 Source0:	%{name}-%{version}.tar.gz
 BuildRoot:	%(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
@@ -26,16 +26,11 @@ Publish Varnish cache metrics to Gmond.
 %setup -q
 
 %build
-python setup.py build
+make
 
 %install
 rm -rf $RPM_BUILD_ROOT
-python setup.py install --root=$RPM_BUILD_ROOT
-
-install -m 755 -d $RPM_BUILD_ROOT%{_libdir}/ganglia/python_modules/
-install -m 755 lib/varnishstats.py $RPM_BUILD_ROOT%{_libdir}/ganglia/python_modules/
-install -m 755 -d $RPM_BUILD_ROOT%{_sysconfdir}/ganglia/conf.d/
-install -m 644 varnish.pyconf $RPM_BUILD_ROOT%{_sysconfdir}/ganglia/conf.d/
+make install DESTDIR=$RPM_BUILD_ROOT libdir=${_libdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
@@ -44,7 +39,7 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root,-)
 %doc README.rst
 
-%{_sysconfdir}/ganglia/conf.d/varnish.pyconf
+%{_sysconfdir}/ganglia/conf.d/varnishstats.pyconf
 %{_libdir}/ganglia/python_modules/varnishstats.py*
 
 %{python_sitelib}/varnish/
