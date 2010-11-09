@@ -15,7 +15,7 @@ collection_group {
   # This is not the full set of metrics available from varnish.
   # To see the complete list of metrics, run:
   #
-  #  .../python_modules/varnish.py -M
+  #  .../python_modules/varnishstats.py -M
   #
   # This will generate output suitable for including in
   # this configuration file.
