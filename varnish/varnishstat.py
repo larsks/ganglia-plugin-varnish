@@ -3,6 +3,16 @@ import lxml.etree
 
 import metrics
 
+m_count = 0
+m_rate  = 1
+
+forced_metrics = {
+        'uptime'        : m_count,
+        'n_vcl'         : m_count,
+        'n_vcl_avail'   : m_count,
+        'n_vcl_discard' : m_count,
+        }
+
 class Varnishstat (object):
     def __init__(self, params):
         self.vspath = params.get('VarnishstatPath', 'varnishstat')
@@ -16,10 +26,12 @@ class Varnishstat (object):
 
         for line in p.stdout:
             name, val, avg, desc = line.strip().split(None, 3)
-            if avg == '.':
-                m.append((name, desc, 'count'))
+            if name in forced_metrics:
+                m.append((name, desc, forced_metrics[name]))
+            elif avg == '.':
+                m.append((name, desc, m_count))
             else:
-                m.append((name, desc, 'rate'))
+                m.append((name, desc, m_rate))
 
         return m
 

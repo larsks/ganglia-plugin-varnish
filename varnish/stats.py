@@ -31,18 +31,16 @@ class VarnishstatMonitor (threading.Thread):
         self.metrics = {}
 
         for m in self.varnishstat.discover_metrics():
-            if m[2] == 'count':
-                self.metrics[m[0]] = metrics.Metric(
-                    m[0],
-                    description=m[1],
-                    groups='varnish',
-                    time_max=2 * self.refresh)
+            if m[2] == varnishstat.m_count:
+                m_type = metrics.Metric
             else:
-                self.metrics[m[0]] = metrics.RateMetric(
-                    m[0],
-                    description=m[1],
-                    groups='varnish',
-                    time_max=2 * self.refresh)
+                m_type = metrics.RateMetric
+
+            self.metrics[m[0]] = m_type(
+                m[0],
+                description=m[1],
+                groups='varnish',
+                time_max=2 * self.refresh)
 
         # These are metrics we calculate.
         self.metrics['cache_hit_ratio'] = metrics.Metric('cache_hit_ratio',
