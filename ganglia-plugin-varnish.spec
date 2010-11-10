@@ -4,7 +4,7 @@
 %endif
 
 Name:		ganglia-plugin-varnish
-Version:	1.1.0
+Version:	1.1.1
 Release:	2%{?dist}
 Summary:	Ganglia metric plugin for Varnish.
 
