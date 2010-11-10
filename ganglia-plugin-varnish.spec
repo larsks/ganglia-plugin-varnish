@@ -5,7 +5,7 @@
 
 Name:		ganglia-plugin-varnish
 Version:	1.1.0
-Release:	1%{?dist}
+Release:	2%{?dist}
 Summary:	Ganglia metric plugin for Varnish.
 
 Group:		System Environment/Base
@@ -44,4 +44,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %{python_sitelib}/varnish/
 %{python_sitelib}/ganglia_plugin_varnish*.egg-info
+
+%post
+cf=%{_sysconfdir}/ganglia/conf.d/varnish_plugin.pyconf
+if [ ! -f $cf ]; then
+	cp $cf.sample $cf
+fi
 
