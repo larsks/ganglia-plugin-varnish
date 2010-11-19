@@ -18,6 +18,11 @@ class Varnishstat (object):
         self.vspath = params.get('VarnishstatPath', 'varnishstat')
 
     def discover_metrics(self):
+        '''This gets a list of the available metrics from Varnish.  It
+        attempts to guess the metric type by the presence or absence of the
+        "average" field.  You can override this guess in the
+        ``forced_metrics`` dictionary.'''
+
         m = []
 
         p = subprocess.Popen([self.vspath, '-1'],
