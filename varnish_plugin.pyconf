@@ -19,19 +19,19 @@ metric {
     value_threshold = 1.0
 }
 metric {
-    # Fetch HTTP 1xx
+    # Fetch no body (1xx) (float)
     # display format: %0.2f
     name = "fetch_1xx"
     value_threshold = 1.0
 }
 metric {
-    # Fetch HTTP 204
+    # Fetch no body (204) (float)
     # display format: %0.2f
     name = "fetch_204"
     value_threshold = 1.0
 }
 metric {
-    # Fetch HTTP 304
+    # Fetch no body (304) (float)
     # display format: %0.2f
     name = "fetch_304"
     value_threshold = 1.0
@@ -415,7 +415,7 @@ metric {
     value_threshold = 1.0
 }
 metric {
-    # N lqueue work requests (float)
+    # Work request queue length (float)
     # display format: %0.2f
     name = "n_wrk_lqueue"
     value_threshold = 1.0
@@ -685,13 +685,13 @@ metric {
     value_threshold = 1.0
 }
 metric {
-    # N banned objects (uint)
+    # N total active bans (uint)
     # display format: %u
     name = "n_ban"
     value_threshold = 1.0
 }
 metric {
-    # N banned objects added (uint)
+    # N new bans added (uint)
     # display format: %u
     name = "n_ban_add"
     value_threshold = 1.0
@@ -703,49 +703,49 @@ metric {
     value_threshold = 1.0
 }
 metric {
-    # N banned object test (uint)
+    # N objects tested (uint)
     # display format: %u
     name = "n_ban_obj_test"
     value_threshold = 1.0
 }
 metric {
-    # N banned object retest (uint)
+    # N regexps tested against (uint)
     # display format: %u
     name = "n_ban_re_test"
     value_threshold = 1.0
 }
 metric {
-    # N banned objects retired (uint)
+    # N old bans deleted (uint)
     # display format: %u
     name = "n_ban_retire"
     value_threshold = 1.0
 }
 metric {
-    # N gunzip (uint)
+    # Gunzip operations (uint)
     # display format: %u
     name = "n_gunzip"
     value_threshold = 1.0
 }
 metric {
-    # N gzip (uint)
+    # Gzip operations (uint)
     # display format: %u
     name = "n_gzip"
     value_threshold = 1.0
 }
 metric {
-    # N vbc (uint)
+    # N struct vbc (uint)
     # display format: %u
     name = "n_vbc"
     value_threshold = 1.0
 }
 metric {
-    # N waitinglist (uint)
+    # N struct waitinglist (uint)
     # display format: %u
     name = "n_waitinglist"
     value_threshold = 1.0
 }
 metric {
-    # N vmods (uint)
+    # Loaded VMODs (uint)
     # display format: %u
     name = "n_vmods"
     value_threshold = 1.0
