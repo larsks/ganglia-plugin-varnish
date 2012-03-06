@@ -750,6 +750,612 @@ metric {
     name = "n_vmods"
     value_threshold = 1.0
 }
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Allocator requests
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Allocator failures
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes allocated
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes freed
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Allocations outstanding
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes outstanding
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes available
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #N struct smf
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #N small free smf
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #N large free smf
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Allocator requests
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Allocator failures
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes allocated
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes freed
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Allocations outstanding
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes outstanding
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes available
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
 
 }
 
