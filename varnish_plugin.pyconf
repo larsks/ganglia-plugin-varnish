@@ -759,601 +759,601 @@ metric {
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sms.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sms.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sms.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.smp.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.smp.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.smp.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.smp.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sma.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sma.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sma.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sma.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.smf.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.smf.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.smf.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.smf.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hsl.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hsl.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hsl.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hsl.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hcb.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hcb.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hcb.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hcb.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hcl.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hcl.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hcl.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.hcl.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vcl.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vcl.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vcl.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vcl.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.stat.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.stat.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.stat.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.stat.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sessmem.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sessmem.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sessmem.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.sessmem.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.wstat.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.wstat.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.wstat.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.wstat.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.herder.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.herder.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.herder.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.herder.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.wq.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.wq.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.wq.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.wq.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.objhdr.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.objhdr.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.objhdr.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.objhdr.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.exp.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.exp.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.exp.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.exp.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.lru.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.lru.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.lru.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.lru.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.cli.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.cli.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.cli.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.cli.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.ban.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.ban.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.ban.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.ban.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vbp.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vbp.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vbp.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vbp.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vbe.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vbe.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vbe.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.vbe.colls"
     value_threshold = 1.0
 }
 metric {
     #Created locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.backend.creat"
     value_threshold = 1.0
 }
 metric {
     #Destroyed locks
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.backend.destroy"
     value_threshold = 1.0
 }
 metric {
     #Lock Operations
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.backend.locks"
     value_threshold = 1.0
 }
 metric {
     #Collisions
     # display format: %u
-    name="LCK.sms.creat"
+    name="LCK.backend.colls"
     value_threshold = 1.0
 }
 metric {
     #Allocator requests
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMF.s0.c_req"
     value_threshold = 1.0
 }
 metric {
     #Allocator failures
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMF.s0.c_fail"
     value_threshold = 1.0
 }
 metric {
     #Bytes allocated
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMF.s0.c_bytes"
     value_threshold = 1.0
 }
 metric {
     #Bytes freed
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMF.s0.c_freed"
     value_threshold = 1.0
 }
 metric {
     #Allocations outstanding
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMF.s0.g_alloc"
     value_threshold = 1.0
 }
 metric {
     #Bytes outstanding
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMF.s0.g_bytes"
     value_threshold = 1.0
 }
 metric {
     #Bytes available
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMF.s0.g_space"
     value_threshold = 1.0
 }
 metric {
     #N struct smf
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMF.s0.g_smf"
     value_threshold = 1.0
 }
 metric {
     #N small free smf
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMF.s0.g_smf_frag"
     value_threshold = 1.0
 }
 metric {
     #N large free smf
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMF.s0.g_smf_large"
     value_threshold = 1.0
 }
 metric {
     #Allocator requests
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMA.Transient.c_req"
     value_threshold = 1.0
 }
 metric {
     #Allocator failures
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMA.Transient.c_fail"
     value_threshold = 1.0
 }
 metric {
     #Bytes allocated
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMA.Transient.c_bytes"
     value_threshold = 1.0
 }
 metric {
     #Bytes freed
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMA.Transient.c_freed"
     value_threshold = 1.0
 }
 metric {
     #Allocations outstanding
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMA.Transient.g_alloc"
     value_threshold = 1.0
 }
 metric {
     #Bytes outstanding
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMA.Transient.g_bytes"
     value_threshold = 1.0
 }
 metric {
     #Bytes available
     # display format: %u
-    name="LCK.sms.creat"
+    name="SMA.Transient.g_space"
     value_threshold = 1.0
 }
 
