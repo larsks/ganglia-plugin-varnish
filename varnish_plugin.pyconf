@@ -19,6 +19,24 @@ metric {
     value_threshold = 1.0
 }
 metric {
+    # Fetch no body (1xx) (float)
+    # display format: %0.2f
+    name = "fetch_1xx"
+    value_threshold = 1.0
+}
+metric {
+    # Fetch no body (204) (float)
+    # display format: %0.2f
+    name = "fetch_204"
+    value_threshold = 1.0
+}
+metric {
+    # Fetch no body (304) (float)
+    # display format: %0.2f
+    name = "fetch_304"
+    value_threshold = 1.0
+}
+metric {
     # Total pass (float)
     # display format: %0.2f
     name = "s_pass"
@@ -64,6 +82,12 @@ metric {
     # Objects ESI parsed (unlock) (float)
     # display format: %0.2f
     name = "esi_parse"
+    value_threshold = 1.0
+}
+metric {
+    # ESI parse warnings (unlock) (float)
+    # display format: %0.2f
+    name = "esi_warnings"
     value_threshold = 1.0
 }
 metric {
@@ -385,6 +409,18 @@ metric {
     value_threshold = 1.0
 }
 metric {
+    # N queued work requests (float)
+    # display format: %0.2f
+    name = "n_wrk_queued"
+    value_threshold = 1.0
+}
+metric {
+    # Work request queue length (float)
+    # display format: %0.2f
+    name = "n_wrk_lqueue"
+    value_threshold = 1.0
+}
+metric {
     # HTTP header overflows (float)
     # display format: %0.2f
     name = "losthdr"
@@ -646,6 +682,678 @@ metric {
     # N expired objects (uint)
     # display format: %u
     name = "n_expired"
+    value_threshold = 1.0
+}
+metric {
+    # N total active bans (uint)
+    # display format: %u
+    name = "n_ban"
+    value_threshold = 1.0
+}
+metric {
+    # N new bans added (uint)
+    # display format: %u
+    name = "n_ban_add"
+    value_threshold = 1.0
+}
+metric {
+    # N duplicate banned objects (uint)
+    # display format: %u
+    name = "n_ban_dups"
+    value_threshold = 1.0
+}
+metric {
+    # N objects tested (uint)
+    # display format: %u
+    name = "n_ban_obj_test"
+    value_threshold = 1.0
+}
+metric {
+    # N regexps tested against (uint)
+    # display format: %u
+    name = "n_ban_re_test"
+    value_threshold = 1.0
+}
+metric {
+    # N old bans deleted (uint)
+    # display format: %u
+    name = "n_ban_retire"
+    value_threshold = 1.0
+}
+metric {
+    # Gunzip operations (uint)
+    # display format: %u
+    name = "n_gunzip"
+    value_threshold = 1.0
+}
+metric {
+    # Gzip operations (uint)
+    # display format: %u
+    name = "n_gzip"
+    value_threshold = 1.0
+}
+metric {
+    # N struct vbc (uint)
+    # display format: %u
+    name = "n_vbc"
+    value_threshold = 1.0
+}
+metric {
+    # N struct waitinglist (uint)
+    # display format: %u
+    name = "n_waitinglist"
+    value_threshold = 1.0
+}
+metric {
+    # Loaded VMODs (uint)
+    # display format: %u
+    name = "n_vmods"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sms.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sms.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sms.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sms.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.smp.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.smp.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.smp.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.smp.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sma.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sma.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sma.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sma.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.smf.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.smf.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.smf.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.smf.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.hsl.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.hsl.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.hsl.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.hsl.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.hcb.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.hcb.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.hcb.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.hcb.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.hcl.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.hcl.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.hcl.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.hcl.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.vcl.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.vcl.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.vcl.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.vcl.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.stat.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.stat.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.stat.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.stat.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.sessmem.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.sessmem.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.sessmem.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.sessmem.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.wstat.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.wstat.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.wstat.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.wstat.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.herder.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.herder.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.herder.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.herder.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.wq.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.wq.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.wq.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.wq.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.objhdr.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.objhdr.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.objhdr.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.objhdr.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.exp.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.exp.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.exp.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.exp.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.lru.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.lru.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.lru.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.lru.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.cli.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.cli.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.cli.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.cli.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.ban.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.ban.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.ban.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.ban.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.vbp.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.vbp.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.vbp.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.vbp.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.vbe.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.vbe.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.vbe.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.vbe.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Created locks
+    # display format: %u
+    name="LCK.backend.creat"
+    value_threshold = 1.0
+}
+metric {
+    #Destroyed locks
+    # display format: %u
+    name="LCK.backend.destroy"
+    value_threshold = 1.0
+}
+metric {
+    #Lock Operations
+    # display format: %u
+    name="LCK.backend.locks"
+    value_threshold = 1.0
+}
+metric {
+    #Collisions
+    # display format: %u
+    name="LCK.backend.colls"
+    value_threshold = 1.0
+}
+metric {
+    #Allocator requests
+    # display format: %u
+    name="SMF.s0.c_req"
+    value_threshold = 1.0
+}
+metric {
+    #Allocator failures
+    # display format: %u
+    name="SMF.s0.c_fail"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes allocated
+    # display format: %u
+    name="SMF.s0.c_bytes"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes freed
+    # display format: %u
+    name="SMF.s0.c_freed"
+    value_threshold = 1.0
+}
+metric {
+    #Allocations outstanding
+    # display format: %u
+    name="SMF.s0.g_alloc"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes outstanding
+    # display format: %u
+    name="SMF.s0.g_bytes"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes available
+    # display format: %u
+    name="SMF.s0.g_space"
+    value_threshold = 1.0
+}
+metric {
+    #N struct smf
+    # display format: %u
+    name="SMF.s0.g_smf"
+    value_threshold = 1.0
+}
+metric {
+    #N small free smf
+    # display format: %u
+    name="SMF.s0.g_smf_frag"
+    value_threshold = 1.0
+}
+metric {
+    #N large free smf
+    # display format: %u
+    name="SMF.s0.g_smf_large"
+    value_threshold = 1.0
+}
+metric {
+    #Allocator requests
+    # display format: %u
+    name="SMA.Transient.c_req"
+    value_threshold = 1.0
+}
+metric {
+    #Allocator failures
+    # display format: %u
+    name="SMA.Transient.c_fail"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes allocated
+    # display format: %u
+    name="SMA.Transient.c_bytes"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes freed
+    # display format: %u
+    name="SMA.Transient.c_freed"
+    value_threshold = 1.0
+}
+metric {
+    #Allocations outstanding
+    # display format: %u
+    name="SMA.Transient.g_alloc"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes outstanding
+    # display format: %u
+    name="SMA.Transient.g_bytes"
+    value_threshold = 1.0
+}
+metric {
+    #Bytes available
+    # display format: %u
+    name="SMA.Transient.g_space"
     value_threshold = 1.0
 }
 
