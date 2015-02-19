@@ -69,13 +69,13 @@ class VarnishstatMonitor (threading.Thread):
         # We need to calculate a few metrics from the raw data.
         try:
             self.metrics['cache_hit_ratio'].update(
-                (self.metrics['cache_hit'].value*1.0)/self.metrics['cache_miss'].value)
+                (self.metrics['MAIN.cache_hit'].value*1.0)/self.metrics['MAIN.cache_miss'].value)
         except ZeroDivisionError:
             self.metrics['cache_hit_ratio'].update(0)
 
         try:
             self.metrics['cache_hit_pct'].update(
-                (self.metrics['cache_hit'].value*1.0)/self.metrics['client_req'].value * 100)
+                (self.metrics['MAIN.cache_hit'].value*1.0)/self.metrics['MAIN.client_req'].value * 100)
         except ZeroDivisionError:
             self.metrics['cache_hit_pct'].update(0)
 

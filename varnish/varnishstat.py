@@ -27,9 +27,8 @@ class Varnishstat (object):
 
         p = subprocess.Popen([self.vspath, '-1'],
             stdout=subprocess.PIPE)
-        p.wait()
 
-        for line in p.stdout:
+        for line in iter(p.stdout.readline, b''):
             name, val, avg, desc = line.strip().split(None, 3)
             if name in forced_metrics:
                 m.append((name, desc, forced_metrics[name]))
@@ -37,6 +36,8 @@ class Varnishstat (object):
                 m.append((name, desc, m_count))
             else:
                 m.append((name, desc, m_rate))
+
+        p.communicate()
 
         return m
 
@@ -46,9 +47,9 @@ class Varnishstat (object):
 
         p = subprocess.Popen([self.vspath, '-1', '-x'],
             stdout=subprocess.PIPE)
-        p.wait()
+        output = p.communicate()[0]
 
-        doc = lxml.etree.fromstring(p.stdout.read())
+        doc = lxml.etree.fromstring(output)
         for stat in doc.xpath('/varnishstat/stat'):
             name = stat.xpath('name')[0].text
             value = stat.xpath('value')[0].text
